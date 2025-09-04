@@ -1,0 +1,19 @@
+.profissionais{
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 15px;
+    row-gap: 15px;
+    margin: 15px 0px;
+}
+
+div.profissional{
+    border: 1px solid;
+    border-radius: 15px;
+    padding: 15px;
+}
+
+div.buttons{
+    display: flex;
+    justify-content: space-around;
+}
+
