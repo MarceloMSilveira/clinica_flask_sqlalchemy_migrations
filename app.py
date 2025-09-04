@@ -1,12 +1,14 @@
 from flask import Flask, render_template, request, redirect, url_for
 from models import Paciente, Profissional, atendimento
 from db_definition import db
+from flask_migrate import Migrate
 
 app = Flask(__name__)
 
 app.config["SQLALCHEMY_DATABASE_URI"] = "postgresql://marcelopostgresuser:73$Rps@localhost:5432/integrare"
 
 db.init_app(app)
+migrate = Migrate(app,db)
 
 @app.route("/")
 def home():
